@@ -1,0 +1,5 @@
+my-app/node_modules/
+my-app/dist/
+backend/node_modules/
+my-app/package-lock.json
+backend/package-lock.json
