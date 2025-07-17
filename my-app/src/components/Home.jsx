@@ -23,8 +23,8 @@ export default function Home() {
       alert("Please enter your name before creating a room!");
       return;
     }
-    const newRoomId = `room-${Math.floor(1000 + Math.random() * 9000)}`;
-    navigate(`/room/${newRoomId}/${name}`);
+    
+    navigate(`/room/${roomId}/${name}`);
   };
 
   return (
