@@ -8,7 +8,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/register", form);
+      await axios.post("https://tensorbackend.fwitech.com/register", form);
       alert("Registered Successfully!");
       navigate("/login");
       setForm({ name: "", username: "", password: "" });

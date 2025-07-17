@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5000", {
+const socket = io("https://tensorbackend.fwitech.com/", {
   transports: ["websocket", "polling"],
 });
 
@@ -66,7 +66,7 @@ const ChatBot = () => {
         <div className="bg-gray-800 p-4 rounded-lg text-center">
           <h2 className="font-semibold mb-2">Remote Stream</h2>
           {remoteFrame ? (
-            <h1 className="w-full h-60 md:h-64 object-cover rounded">need api or</h1>
+            <h1 className="w-full h-60 md:h-64 object-cover rounded">TURN/STUN server or external WebRTC signaling API</h1>
           ) : (
             <div className="w-full h-60 md:h-64 flex items-center justify-center text-gray-400">
               Waiting for others...

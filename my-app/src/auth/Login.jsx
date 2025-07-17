@@ -9,14 +9,14 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/login", form);
+      const res = await axios.post("https://tensorbackend.fwitech.com/login", form);
       localStorage.setItem("token", res.data.data);
       localStorage.setItem("name", res.data.name);
       window.dispatchEvent(new Event("userLoggedIn"));
       alert("Login Successful!");
       navigate("/user");
     } catch (err) {
-      alert(err.response?.data?.message || "Login failed");
+      alert(err.response?.data?.message );
     }
   };
 

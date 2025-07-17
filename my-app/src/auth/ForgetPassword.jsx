@@ -7,7 +7,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put("http://localhost:5000/update", {
+      await axios.put("https://tensorbackend.fwitech.com/update", {
         username: form.username,
         password: form.password,
       });
